@@ -31,6 +31,8 @@ const customJestConfig = {
   coveragePathIgnorePatterns: [
     '/node_modules/',
     '.next',
+    'jest.config.js',
+    'coverage',
   ],
   moduleNameMapper: {
     '^.+\\.(css|scss)$': 'identity-obj-proxy',

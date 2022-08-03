@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import ExampleItem from './ExampleItem';
+import ExampleItem from '../../components/ExampleItem';
 
 interface IProps {
 
