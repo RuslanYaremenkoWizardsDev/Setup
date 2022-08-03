@@ -9,6 +9,6 @@ const nextConfig = withPWA({
   },
   reactStrictMode: true,
   swcMinify: true,
-})
+});
 
-module.exports = nextConfig
+module.exports = nextConfig;
