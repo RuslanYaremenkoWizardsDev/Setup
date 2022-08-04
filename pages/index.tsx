@@ -5,10 +5,12 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
   const { locale, asPath, push } = useRouter();
+  const { t } = useTranslation();
 
   const languageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     push('/', asPath, { locale: e.currentTarget.value });
@@ -26,7 +28,7 @@ const Home: NextPage = () => {
           <option value="uk">Ukrainian</option>
         </select>
         <h1 className={styles.title}>
-          Welcome to
+          {t('welcome')}
           {` ${locale} `}
           <a href="https://nextjs.org">Next.js!</a>
         </h1>
@@ -50,13 +52,10 @@ const Home: NextPage = () => {
   );
 };
 
-export async function getStaticProps({ locale }) {
-  console.log(locale);
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common'])),
-    },
-  };
-}
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['common']),
+  },
+});
 
 export default Home;

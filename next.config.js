@@ -5,7 +5,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 const pwa = require('./configs/pwa');
-const i18n = require('./next-i18next.config');
+const { i18n } = require('./next-i18next.config');
 
 const isProd = process.env.NODE_ENV === 'production';
 
