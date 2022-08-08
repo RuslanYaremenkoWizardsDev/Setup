@@ -36,3 +36,7 @@ yarn-error.log*
 *.tsbuildinfo
 
 .swc
+
+public/sw.js
+*.js.map
+workbox-*.js
