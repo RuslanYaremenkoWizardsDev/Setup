@@ -1,0 +1,11 @@
+{
+    "API_prod":  "https://api.github.com/",
+    "API_staging": "https://api.github.com/",
+    "API_dev": "https://api.github.com/",
+    
+    "users":{
+        "searchUsers": "/search/users",
+        "repos": "/repos",
+        "search": "/search"
+    }
+}  
