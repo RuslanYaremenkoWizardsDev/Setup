@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { countSelector } from '../../store/example/selectors';
-import { increment, decrement } from '../../store/example/reducer';
-import ExampleItem from '../../components/ExampleItem';
+import { countSelector } from '../../src/store/example/selectors';
+import { increment, decrement } from '../../src/store/example/reducer';
+import ExampleItem from '../../src/components/ExampleItem';
 
 interface IProps {
 

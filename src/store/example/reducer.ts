@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface CounterState {
@@ -14,13 +15,13 @@ export const counterSlice = createSlice({
   name: 'counter',
   initialState,
   reducers: {
-    increment: (state) => {
+    increment: (state: { value: any; incrementAmount: any; }) => {
       state.value += state.incrementAmount;
     },
-    decrement: (state) => {
+    decrement: (state: { value: number; incrementAmount: number; }) => {
       state.value -= state.incrementAmount;
     },
-    changeIncrementAmount: (state, action: PayloadAction<number>) => {
+    changeIncrementAmount: (state: { incrementAmount: number; }, action: PayloadAction<number>) => {
       state.incrementAmount = action.payload;
     },
   },

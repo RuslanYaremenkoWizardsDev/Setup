@@ -52,7 +52,7 @@ const Home: NextPage = () => {
   );
 };
 
-export const getStaticProps = async ({ locale }) => ({
+export const getStaticProps = async ({ locale }: any) => ({
   props: {
     ...await serverSideTranslations(locale, ['common']),
   },
